@@ -1,15 +1,15 @@
-import {
-  LeftOutlined,
-  EllipsisOutlined,
-  HeartTwoTone,
-} from "@ant-design/icons";
 import { Tabs, WingBlank, NavBar, Badge } from "antd-mobile";
 import React from "react";
-import "./style.css";
+import { Link } from "react-router-dom";
+import { LeftOutlined, HeartTwoTone } from "@ant-design/icons";
+
+import PopOver from "./PopOver";
 import ProductList from "../screens/ProductList/ProductList";
 
-class Navigations extends React.Component {
-  tabsList() {
+import "./style.scss";
+
+class TabProduct extends React.Component {
+  render() {
     const tabs = [
       { title: <Badge dot>Recommend</Badge> },
       { title: <Badge>Dinner</Badge> },
@@ -40,11 +40,14 @@ class Navigations extends React.Component {
       </Tabs>
     );
   }
+}
 
+class Navigations extends React.Component {
   render() {
     return (
       <div>
         <NavBar
+          className="navbar-main"
           mode="dark"
           leftContent={<LeftOutlined />}
           rightContent={[
@@ -56,16 +59,16 @@ class Navigations extends React.Component {
                 fontSize: "20px",
               }}
             />,
-            <EllipsisOutlined key="1" style={{ fontSize: "20px" }} />,
+            <PopOver />,
           ]}
         >
-          ADDoL
+          <Link to="/">ADDoL</Link>
         </NavBar>
         <WingBlank size="md"></WingBlank>
-        {this.tabsList()}
       </div>
     );
   }
 }
 
-export default Navigations;
+export { Navigations };
+export { TabProduct };

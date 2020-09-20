@@ -1,22 +1,18 @@
 import { Card, Flex, WhiteSpace, WingBlank } from "antd-mobile";
 import React from "react";
-import "./style.css";
+import { Link } from "react-router-dom";
+import "./style.scss";
 
 class ContentProduct extends React.Component {
   render() {
     return (
-      <Flex wrap="wrap">
-        <Card className="card-content">
-          <Card.Header
-            thumbStyle={{ width: "100%" }}
-            thumb={this.props.image}
-          />
-          <Card.Body className="card-body">
-            <span className="title-content">{this.props.title}</span>
-          </Card.Body>
-          <Card.Footer className="card-footer" content={this.props.price} />
-        </Card>
-      </Flex>
+      <Card className="card-content">
+        <Card.Header className="card-header" thumb={this.props.image} />
+        <Card.Body className="card-body">
+          <span className="title-content">{this.props.title}</span>
+        </Card.Body>
+        <Card.Footer className="card-footer" content={this.props.price} />
+      </Card>
     );
   }
 }
@@ -43,7 +39,7 @@ class ProductList extends React.Component {
         <WhiteSpace size="lg"></WhiteSpace>
         <h4>Recommended For U</h4>
         <WhiteSpace size="md"></WhiteSpace>
-        {this.productList()}
+        <Flex wrap="wrap">{this.productList()}</Flex>
         <WhiteSpace size="md"></WhiteSpace>
       </WingBlank>
     );

@@ -1,8 +1,8 @@
 import { Card, Flex, WhiteSpace, WingBlank } from "antd-mobile";
 import React from "react";
-import "./style.css";
+import "./style.scss";
 
-export default function ProductList() {
+export default function ProductDetail() {
   return (
     <WingBlank size="lg">
       <WhiteSpace size="lg"></WhiteSpace>

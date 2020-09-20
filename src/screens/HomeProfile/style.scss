@@ -1,0 +1,12 @@
+.text-price {
+  display: inline-block;
+  line-height: normal;
+  .currency {
+    vertical-align: 0.8em;
+    color: black;
+  }
+  .price {
+    font-size: 2em;
+    color: black;
+  }
+}

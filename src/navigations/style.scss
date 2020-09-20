@@ -32,6 +32,24 @@
   letter-spacing: 0.07em;
 }
 
+.navbar-main {
+  a,
+  a:active,
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .popover-navbar {
+    font-size: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    img {
+      width: 5px;
+    }
+  }
+}
+
 .tabs-content {
   align-items: "center";
   justify-content: "center";
